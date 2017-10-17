@@ -664,26 +664,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\watenatj\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Nathan - User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\watenatj\\Documents\\BlackJack_C-Sharp\\BlackJack\\BlackJack.csproj",
+      "projectUniqueName": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
       "projectName": "BlackJack",
-      "projectPath": "C:\\Users\\watenatj\\Documents\\BlackJack_C-Sharp\\BlackJack\\BlackJack.csproj",
-      "packagesPath": "C:\\Users\\watenatj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\watenatj\\Documents\\BlackJack_C-Sharp\\BlackJack\\obj\\",
+      "projectPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
+      "packagesPath": "C:\\Users\\Nathan - User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\watenatj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Nathan - User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -697,11 +690,6 @@
         "netcoreapp2.0": {
           "projectReferences": {}
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {
@@ -709,8 +697,7 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
+            "version": "2.0.0"
           }
         },
         "imports": [

@@ -19,3 +19,4 @@ C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfo.cs
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.dll
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.pdb
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.csprojResolveAssemblyReference.cache

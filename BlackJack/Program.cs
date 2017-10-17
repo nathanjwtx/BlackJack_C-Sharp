@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BlackJack
 {
@@ -7,25 +10,51 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
+            var players = new List<object>();
             var cards = new CardDeck();
-            Console.WriteLine(cards.DealCard());
-        }
-    }
-
-    public class Player
-    {
-        public string PlayerName { get; set; }
-        public List<string> Hand { get; set; }
-
-        public Player()
-        {
+            Console.WriteLine("Enter number of players: ");
+            var intPlayers = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < intPlayers; i++)
+            {
+                Console.WriteLine($"Enter player {i + 1} name: ");
+                var p1 = new Player();
+                p1.SetPlayerName(Console.ReadLine());
+                players.Add(p1);
+            }
             
         }
 
+        public static void Testing(ref object player)
+        {
+            Type type = player.GetType();
+            PropertyInfo prop = type.GetProperty("GetPlayer");
+            Console.WriteLine(prop.GetGetMethod());
+
+        }
+
     }
 
-    class PlayerHand : CardDeck
+//    public class Game
+//    {
+//        public List<string> Deck { get; set; }
+//        public List<string> Players { get; set; }
+//        
+//        
+//    }
+
+    public class Player
     {
+        public string PlayerName { private get; set; }
+        public List<string> Hand { get; set; }
+
+        public void SetPlayerName(string name)
+        {
+            this.PlayerName = name;
+        }
         
+        public string GetPlayer()
+        {
+            return PlayerName;
+        }
     }
 }
