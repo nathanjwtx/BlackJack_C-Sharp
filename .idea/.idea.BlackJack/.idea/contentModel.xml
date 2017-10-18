@@ -15,7 +15,8 @@
             </e>
           </e>
         </e>
-        <e p="Program [conflicted].cs" t="Include" />
+        <e p="Player.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
       </e>
       <e p="BlackJack.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

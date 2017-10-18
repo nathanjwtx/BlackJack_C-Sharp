@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
@@ -12,45 +12,34 @@ namespace BlackJack
         static void Main(string[] args)
         {
             var players = new List<Player>();
-            var cards = new CardDeck();
             Console.WriteLine("Enter number of players: ");
             var intPlayers = Convert.ToInt32(Console.ReadLine());
-            for (int i = 0; i < intPlayers; i++)
+            for (var i = 0; i < intPlayers + 1; i++)
             {
-                Console.WriteLine($"Enter player {i + 1} name: ");
+                var name = "";
+                if (i == 0)
+                {
+                    name = "Dealer";
+                }
+                else
+                {
+                    Console.WriteLine($"Enter player {i} name: ");
+                    name = Console.ReadLine();
+                }
                 var p1 = new Player();
-                p1.SetPlayerName(Console.ReadLine());
                 players.Add(p1);
+                p1.SetPlayerName(name);
             }
-            for (var i = 0; i < players.Count; i++)
-            {
-                Console.WriteLine(players[i].GetPlayer());
-            }
-        }
-    }
-
-//    public class Game
-//    {
-//        public List<string> Deck { get; set; }
-//        public List<string> Players { get; set; }
-//        
-//        
-//    }
-
-    public class Player
-    {
-        public string PlayerName { private get; set; }
-        public List<string> Hand { get; set; }
-
-        public void SetPlayerName(string name)
-        {
-            this.PlayerName = name;
+            Game(players);
         }
         
-        public string GetPlayer()
+        static void Game(List<Player> players)
         {
-//            Console.WriteLine(this.PlayerName);
-            return PlayerName;
+            var cards = new CardDeck();
+            foreach (Player player in players)
+            {
+                Console.WriteLine(player.GetPlayer());
+            }
         }
     }
 }
