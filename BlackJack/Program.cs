@@ -39,6 +39,15 @@ namespace BlackJack
             foreach (Player player in players)
             {
                 Console.WriteLine(player.GetPlayer());
+                // Deal initial cards 
+                for (int i = 0; i < 2; i++)
+                {
+                    player.UpdateHand(cards.DealCard());    
+                }
+                Console.WriteLine($"{player.GetPlayer()} your cards are: ");
+                player.GetHand();
+                player.SetHandValue();
+                Console.WriteLine(player.GetHandValue());
             }
         }
     }
