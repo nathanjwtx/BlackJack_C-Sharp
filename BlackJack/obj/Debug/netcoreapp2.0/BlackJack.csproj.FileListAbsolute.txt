@@ -1,13 +1,3 @@
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.csproj.CoreCompileInputs.cache
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfoInputs.cache
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfo.cs
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.deps.json
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.json
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.dev.json
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.dll
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.pdb
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.dll
-C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.pdb
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.deps.json
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.json
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.dev.json
@@ -19,4 +9,14 @@ C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfo.cs
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.dll
 C:\Users\watenatj\Documents\BlackJack_C-Sharp\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.pdb
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.deps.json
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.json
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.runtimeconfig.dev.json
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.dll
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\bin\Debug\netcoreapp2.0\BlackJack.pdb
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfoInputs.cache
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.AssemblyInfo.cs
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.dll
+C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.pdb
 C:\Users\Nathan - User\OneDrive\Work - C Sharp\C-Sharp Rider Projects\BlackJack\BlackJack\obj\Debug\netcoreapp2.0\BlackJack.csprojResolveAssemblyReference.cache

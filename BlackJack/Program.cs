@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -10,7 +11,7 @@ namespace BlackJack
     {
         static void Main(string[] args)
         {
-            var players = new List<object>();
+            var players = new List<Player>();
             var cards = new CardDeck();
             Console.WriteLine("Enter number of players: ");
             var intPlayers = Convert.ToInt32(Console.ReadLine());
@@ -21,17 +22,11 @@ namespace BlackJack
                 p1.SetPlayerName(Console.ReadLine());
                 players.Add(p1);
             }
-            
+            for (var i = 0; i < players.Count; i++)
+            {
+                Console.WriteLine(players[i].GetPlayer());
+            }
         }
-
-        public static void Testing(ref object player)
-        {
-            Type type = player.GetType();
-            PropertyInfo prop = type.GetProperty("GetPlayer");
-            Console.WriteLine(prop.GetGetMethod());
-
-        }
-
     }
 
 //    public class Game
@@ -54,6 +49,7 @@ namespace BlackJack
         
         public string GetPlayer()
         {
+//            Console.WriteLine(this.PlayerName);
             return PlayerName;
         }
     }
