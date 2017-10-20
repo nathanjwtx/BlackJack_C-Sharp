@@ -664,26 +664,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nathan - User\\.nuget\\packages\\": {},
+    "C:\\Users\\watenatj\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
+      "projectUniqueName": "C:\\Users\\watenatj\\OneDrive\\Work - C Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\blackjack\\BlackJack.csproj",
       "projectName": "BlackJack",
-      "projectPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
-      "packagesPath": "C:\\Users\\Nathan - User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\obj\\",
+      "projectPath": "C:\\Users\\watenatj\\OneDrive\\Work - C Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\blackjack\\BlackJack.csproj",
+      "packagesPath": "C:\\Users\\watenatj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\watenatj\\OneDrive\\Work - C Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\blackjack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Nathan - User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\watenatj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

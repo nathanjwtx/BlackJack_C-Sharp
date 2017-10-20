@@ -14,18 +14,11 @@ namespace BlackJack
             var players = new List<Player>();
             Console.WriteLine("Enter number of players: ");
             var intPlayers = Convert.ToInt32(Console.ReadLine());
-            for (var i = 0; i < intPlayers + 1; i++)
+            for (var i = 0; i < intPlayers; i++)
             {
                 var name = "";
-                if (i == 0)
-                {
-                    name = "Dealer";
-                }
-                else
-                {
-                    Console.WriteLine($"Enter player {i} name: ");
-                    name = Console.ReadLine();
-                }
+                Console.WriteLine($"Enter player {i + 1} name: ");
+                name = Console.ReadLine();
                 var p1 = new Player();
                 players.Add(p1);
                 p1.SetPlayerName(name);
@@ -35,6 +28,8 @@ namespace BlackJack
         
         static void Game(List<Player> players)
         {
+            var dealer = new Player();
+            dealer.SetPlayerName("Dealer");
             var deck = new CardDeck();
             foreach (Player player in players)
             {
@@ -49,6 +44,15 @@ namespace BlackJack
                 hand.GetHand();
                 hand.SetHandValue();
                 Console.WriteLine(hand.GetHandValue());
+                // Next card
+                if (hand.GetIsBust())
+                {
+                    System.Console.WriteLine("Game over");
+                }
+                else
+                {
+                    System.Console.WriteLine("Deal or stick?");
+                }
             }
             Console.WriteLine(deck.TestCardsLeft());
         }

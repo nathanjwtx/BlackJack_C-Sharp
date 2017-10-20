@@ -8,11 +8,14 @@ namespace BlackJack
         private readonly CardDeck _deck;
         private int HandValue { get; set; }
         public List<string> PlayerHand { get; set; }
+        private bool IsBust { get; set; }
+        public bool Stick { get; set; }
         
         public Hand (CardDeck _deck)
         {
             this._deck = _deck;
             this.PlayerHand = new List<string>();
+            this.IsBust = false;
         }
 
         public void Deal()
@@ -59,11 +62,20 @@ namespace BlackJack
                 }
             }
             this.HandValue = score;
+            if (this.HandValue > 21)
+            {
+                this.IsBust = true;
+            }
         }
 
         public int GetHandValue()
         {
             return this.HandValue;
+        }
+
+        public bool GetIsBust()
+        {
+            return this.IsBust;
         }
     }
 }
