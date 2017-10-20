@@ -45,13 +45,26 @@ namespace BlackJack
                 hand.SetHandValue();
                 Console.WriteLine(hand.GetHandValue());
                 // Next card
-                if (hand.GetIsBust())
+                while (hand.Stick == false)
                 {
-                    System.Console.WriteLine("Game over");
-                }
-                else
-                {
-                    System.Console.WriteLine("Deal or stick?");
+                    Console.WriteLine("(D)eal or (S)tick?");
+                    if (Console.ReadLine().ToUpper() == "S")
+                    {
+                        hand.Stick = true;
+                        Console.WriteLine($"{player.GetPlayer()} has stuck on {hand.GetHandValue()}");
+                    }
+                    else
+                    {
+                        hand.Deal();
+                        hand.GetHand();
+                        hand.SetHandValue();
+                        Console.WriteLine($"{player.GetPlayer()} score is {hand.GetHandValue()}");
+                        if (hand.GetIsBust() == true)
+                        {
+                            Console.WriteLine("You busted");
+                            break;
+                        }
+                    }
                 }
             }
             Console.WriteLine(deck.TestCardsLeft());
