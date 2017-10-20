@@ -50,6 +50,11 @@ namespace BlackJack
             return Deck.Pop();
         }
 
+        public int TestCardsLeft()
+        {
+            return Deck.Count();
+        }
+
     }
 
 }

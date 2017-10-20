@@ -35,20 +35,22 @@ namespace BlackJack
         
         static void Game(List<Player> players)
         {
-            var cards = new CardDeck();
+            var deck = new CardDeck();
             foreach (Player player in players)
             {
+                var hand = new Hand(deck);
                 Console.WriteLine(player.GetPlayer());
                 // Deal initial cards 
                 for (int i = 0; i < 2; i++)
                 {
-                    player.UpdateHand(cards.DealCard());    
+                    hand.Deal();  
                 }
                 Console.WriteLine($"{player.GetPlayer()} your cards are: ");
-                player.GetHand();
-                player.SetHandValue();
-                Console.WriteLine(player.GetHandValue());
+                hand.GetHand();
+                hand.SetHandValue();
+                Console.WriteLine(hand.GetHandValue());
             }
+            Console.WriteLine(deck.TestCardsLeft());
         }
     }
 }

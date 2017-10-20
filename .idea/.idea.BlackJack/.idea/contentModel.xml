@@ -8,6 +8,7 @@
         <e p="BlackJack.csproj" t="IncludeRecursive" />
         <e p="BlackJack.csproj.DotSettings" t="Include" />
         <e p="CardDeck.cs" t="Include" />
+        <e p="Hand.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
