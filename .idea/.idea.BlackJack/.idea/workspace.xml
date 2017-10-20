@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db81c0a3-4f93-4aab-ad57-edce1d1d0869" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.csprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.pdb" afterPath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.csproj.CoreCompileInputs.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.pdb" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/contentModel.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BlackJack/Hand.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/CardDeck.cs" afterPath="$PROJECT_DIR$/BlackJack/CardDeck.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/Player.cs" afterPath="$PROJECT_DIR$/BlackJack/Player.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/Program.cs" afterPath="$PROJECT_DIR$/BlackJack/Program.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.csproj.FileListAbsolute.txt" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.csproj.FileListAbsolute.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -116,6 +108,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="nathanjwtx &lt;dynamonath@nathanjwtx.me&gt;" />
         <option value="nathanjwtx &lt;nathan@nathanjwtx.me&gt;" />
         <option value="nathanjwtx" />
       </list>
@@ -174,6 +167,11 @@
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="BlackJack (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="BlackJack (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="BlackJack" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -236,7 +234,7 @@
       <workItem from="1508326666299" duration="2840000" />
       <workItem from="1508330284375" duration="2427000" />
       <workItem from="1508358393629" duration="7519000" />
-      <workItem from="1508457378678" duration="1425000" />
+      <workItem from="1508457378678" duration="1668000" />
     </task>
     <task id="LOCAL-00001" summary="Tried to replicate the Python version but can't work out how to pass instance of class to another class.">
       <created>1508284006984</created>
@@ -252,11 +250,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508338720305</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+ Added Hand.cs&#10;+ Moved hand creation and score from Player.cs to Hand.cs&#10;+ Updated Hand.cs to inherit CardDeck.cs methods etc via composition&#10;+ Calculates score of hand">
+      <created>1508458932861</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1508458932861</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29436000" />
+    <option name="totallyTimeSpent" value="29679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -269,7 +274,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -279,7 +283,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32781458" sideWeight="0.49166667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32781458" sideWeight="0.49666667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -328,9 +332,11 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Tried to replicate the Python version but can't work out how to pass instance of class to another class." />
     <MESSAGE value="+ Added Player.cs&#10;+ Replaced List&lt;string&gt; with List&lt;Player&gt; to allow iterating through instances of Player&#10;- Removed previous attempt at passing class instance as a parameter due to barking up wrong tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Added Player.cs&#10;+ Replaced List&lt;string&gt; with List&lt;Player&gt; to allow iterating through instances of Player&#10;- Removed previous attempt at passing class instance as a parameter due to barking up wrong tree" />
+    <MESSAGE value="+ Added Hand.cs&#10;+ Moved hand creation and score from Player.cs to Hand.cs&#10;+ Updated Hand.cs to inherit CardDeck.cs methods etc via composition&#10;+ Calculates score of hand" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Added Hand.cs&#10;+ Moved hand creation and score from Player.cs to Hand.cs&#10;+ Updated Hand.cs to inherit CardDeck.cs methods etc via composition&#10;+ Calculates score of hand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
