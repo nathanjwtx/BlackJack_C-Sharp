@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db81c0a3-4f93-4aab-ad57-edce1d1d0869" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.dll" afterPath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.dll" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.pdb" afterPath="$PROJECT_DIR$/BlackJack/bin/Debug/netcoreapp2.0/BlackJack.pdb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/BlackJack.csproj.nuget.cache" afterPath="$PROJECT_DIR$/BlackJack/obj/BlackJack.csproj.nuget.cache" />
@@ -16,6 +17,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/BlackJack.csproj.nuget.g.targets" afterPath="$PROJECT_DIR$/BlackJack/obj/BlackJack.csproj.nuget.g.targets" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.AssemblyInfo.cs" afterPath="$PROJECT_DIR$/BlackJack/obj/Debug/netcoreapp2.0/BlackJack.AssemblyInfo.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlackJack/obj/project.assets.json" afterPath="$PROJECT_DIR$/BlackJack/obj/project.assets.json" />
+=======
+      <change beforePath="" afterPath="$PROJECT_DIR$/BlackJack/Hand.cs" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.BlackJack/.idea/workspace.xml" />
+>>>>>>> Stashed changes
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,6 +29,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="Program.cs" pinned="false" current-in-tab="true">
@@ -92,6 +98,8 @@
       </file>
     </leaf>
   </component>
+=======
+>>>>>>> Stashed changes
   <component name="FindInProjectRecents">
     <findStrings>
       <find />
@@ -365,6 +373,7 @@
     </breakpoint-manager>
     <watches-manager />
   </component>
+<<<<<<< Updated upstream
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/BlackJack/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1013,4 +1022,6 @@
       </provider>
     </entry>
   </component>
+=======
+>>>>>>> Stashed changes
 </project>

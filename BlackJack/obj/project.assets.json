@@ -664,16 +664,29 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\Nathan - User\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Nathan - User\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
       "projectName": "BlackJack",
       "projectPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\BlackJack.csproj",
       "packagesPath": "C:\\Users\\Nathan - User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Nathan - User\\OneDrive\\Work - C Sharp\\C-Sharp Rider Projects\\BlackJack\\BlackJack\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Nathan - User\\OneDrive\\1 C-Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\BlackJack\\BlackJack.csproj",
+      "projectName": "BlackJack",
+      "projectPath": "C:\\Users\\Nathan - User\\OneDrive\\1 C-Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\BlackJack\\BlackJack.csproj",
+      "packagesPath": "C:\\Users\\Nathan - User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Nathan - User\\OneDrive\\1 C-Sharp\\BlackJack_v3\\BlackJack_C-Sharp\\BlackJack\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nathan - User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -696,8 +709,14 @@
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
+<<<<<<< Updated upstream
             "version": "2.0.0"
+=======
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+>>>>>>> Stashed changes
           }
         },
         "imports": [
