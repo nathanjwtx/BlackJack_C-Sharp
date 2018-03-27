@@ -10,6 +10,7 @@ namespace BlackJack
         public List<string> PlayerHand { get; set; }
         private bool IsBust { get; set; }
         public bool Stick { get; set; }
+        private bool IsBlackJack { get; set; }
         
         public Hand (CardDeck _deck)
         {
