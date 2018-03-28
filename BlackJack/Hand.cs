@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BlackJack
 {
-    class Hand
+    public class Hand
     {
         private readonly CardDeck _deck;
         private int HandValue { get; set; }

@@ -15,5 +15,17 @@ namespace BlackJack.UnitTests1
             
             Assert.That(result, Is.EqualTo(52));
         }
+
+        [Test]
+        public void CardDeck_DealFirstCard_Return51Cards()
+        {
+            var deck = new CardDeck();
+            deck.DealCard();
+
+            var result = deck.TestCardsLeft();
+            
+            Assert.That(result, Is.EqualTo(51));
+
+        }
     }
 }
