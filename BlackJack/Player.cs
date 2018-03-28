@@ -4,7 +4,7 @@ using System.ComponentModel.Design;
 
 namespace BlackJack
 {
-    class Player
+    public class Player
     {
         private string PlayerName { get; set; }
         private int BankRoll { get; set; }
