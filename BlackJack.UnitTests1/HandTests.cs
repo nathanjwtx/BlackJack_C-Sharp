@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using NUnit.Framework;
 
 namespace BlackJack.UnitTests1
@@ -7,16 +9,38 @@ namespace BlackJack.UnitTests1
     public class HandTests
     {
         [Test]
-        public void Deal_AddACard_HandValueGreaterThan1()
+        public void Hand_CreateNewHand_ReturnsListOfTypeString()
+        {
+            var deck = new CardDeck();
+            var hand = new Hand(deck);
+
+            var result = hand.PlayerHand;
+            
+            Assert.That(result, Is.TypeOf<List<String>>());
+        }
+        
+        [Test]
+        public void Deal_AdddCardToHand_HandIsNotEmpty()
         {
             var deck = new CardDeck();
             var hand = new Hand(deck);
             hand.Deal();
-            hand.SetHandValue();
 
-            var result = hand.GetHandValue();
+            var result = hand.PlayerHand;
             
-            Assert.That(result, Is.GreaterThan(0));
+            Assert.That(result, Is.Not.Empty);
+        }
+        
+        [Test]
+        public void Deal_AddACard_HandHas1Card()
+        {
+            var deck = new CardDeck();
+            var hand = new Hand(deck);
+            hand.Deal();
+
+            var result = hand.PlayerHand;
+
+            Assert.That(result.Count, Is.EqualTo(1));
         }
     }
 }
