@@ -5,9 +5,7 @@ VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack", "BlackJack\BlackJack.csproj", "{CF1A071B-DAE0-43A7-BCDD-F75B4AB2D9E3}"
 EndProject
-=======
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackJack.UnitTests1", "BlackJack.UnitTests1\BlackJack.UnitTests1.csproj", "{5B9635F9-369A-444F-843E-14AC1C2F9F45}"
->>>>>>> FixStuff
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
