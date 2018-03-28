@@ -46,7 +46,7 @@ namespace BlackJack
                     }
                 }
             }
-            Console.WriteLine(deck.TestCardsLeft());
+            Console.WriteLine($"Cards left: {deck.TestCardsLeft()}");
         }
     }
 }
