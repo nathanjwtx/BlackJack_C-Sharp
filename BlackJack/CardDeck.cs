@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace BlackJack
 {
-    class CardDeck
+    public class CardDeck
     {
         private List<string> RawDeck { get; set; }
         private Stack<string> Deck { get; set; }
