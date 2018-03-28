@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 
 \.idea/
 
 BlackJack/obj/
+=======
+bin/
+obj/
+.idea/**
+
+
+\.idea/
+>>>>>>> FixStuff
