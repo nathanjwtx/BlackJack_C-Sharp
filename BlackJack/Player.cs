@@ -9,11 +9,12 @@ namespace BlackJack
     {
         private string PlayerName { get; set; }
         public int BankRoll { get; set; }
-
+        public Hand PlayerHand { get; set; }
 
         public Player()
         {
             this.BankRoll = 100;
+            PlayerHand = new Hand();
         }
 
         public Player(int bankroll)

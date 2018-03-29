@@ -11,8 +11,7 @@ namespace BlackJack.UnitTests1
         [Test]
         public void Hand_CreateNewHand_ReturnsListOfTypeString()
         {
-            var deck = new CardDeck();
-            var hand = new Hand(deck);
+            var hand = new Hand();
 
             var result = hand.PlayerHand;
             
@@ -23,23 +22,11 @@ namespace BlackJack.UnitTests1
         public void Deal_AdddCardToHand_HandIsNotEmpty()
         {
             var deck = new CardDeck();
-            var hand = new Hand(deck);
-            hand.Deal();
+            var hand = new Hand();
+            hand.PlayerHand.Add(deck.DealCard());
 
             var result = hand.PlayerHand;
             
-            Assert.That(result, Is.Not.Empty);
-        }
-        
-        [Test]
-        public void Deal_AddACard_HandHas1Card()
-        {
-            var deck = new CardDeck();
-            var hand = new Hand(deck);
-            hand.Deal();
-
-            var result = hand.PlayerHand;
-
             Assert.That(result.Count, Is.EqualTo(1));
         }
     }

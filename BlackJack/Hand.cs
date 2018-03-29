@@ -5,24 +5,25 @@ namespace BlackJack
 {
     public class Hand
     {
-        private readonly CardDeck _deck;
+//        private readonly CardDeck _deck;
         private int HandValue { get; set; }
         public List<string> PlayerHand { get; set; }
         private bool IsBust { get; set; }
         public bool Stick { get; set; }
         private bool IsBlackJack { get; set; }
         
-        public Hand (CardDeck _deck)
+        public Hand ()
+//        public Hand (CardDeck _deck)
         {
-            this._deck = _deck;
-            this.PlayerHand = new List<string>();
-            this.IsBust = false;
+//            this._deck = _deck;
+            PlayerHand = new List<string>();
+            IsBust = false;
         }
 
-        public void Deal()
-        {
-            PlayerHand.Add(this._deck.DealCard());
-        }
+//        public void AddCardToHand(string card)
+//        {
+//            PlayerHand.Add(card);            
+//        }
 
         public void GetHand()
         {
@@ -32,12 +33,12 @@ namespace BlackJack
             }
         }
 
-        public void SetHandValue()
+        public void SetCardValue(string card)
         {
             var score = 0;
-            foreach (var card in PlayerHand)
-            {
-                if (card.Length <= 0) continue;
+            //foreach (var card in PlayerHand)
+            //{
+//                if (card.Length <= 0)
                 switch (card[0])
                 {
                     case 'A':
@@ -61,22 +62,23 @@ namespace BlackJack
                         score += Convert.ToInt32(x);
                         break;
                 }
-            }
-            this.HandValue = score;
-            if (this.HandValue > 21)
+            //}
+            // Update value of hand
+            HandValue += score;
+            if (HandValue > 21)
             {
-                this.IsBust = true;
+                IsBust = true;
             }
         }
-
+        
         public int GetHandValue()
         {
-            return this.HandValue;
+            return HandValue;
         }
 
         public bool GetIsBust()
         {
-            return this.IsBust;
+            return IsBust;
         }
     }
 }
