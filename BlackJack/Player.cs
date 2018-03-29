@@ -36,6 +36,6 @@ namespace BlackJack
             return PlayerName;
         }
 
-        
+        public string Status { get; set; }        
     }
 }

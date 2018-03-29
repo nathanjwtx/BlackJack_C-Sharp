@@ -7,8 +7,7 @@ namespace BlackJack
     {
         public void Game(List<Player> players)
         {
-            var dealer = new Player();
-            dealer.SetPlayerName("Dealer");
+            var dealer = new Dealer(new Player());
             var deck = new CardDeck();
             foreach (Player player in players)
             {
@@ -30,6 +29,7 @@ namespace BlackJack
                     if (Console.ReadLine().ToUpper() == "S")
                     {
                         hand.Stick = true;
+                        player.Status = "stick";
                         Console.WriteLine($"{player.GetPlayer()} has stuck on {hand.GetHandValue()}");
                     }
                     else
@@ -40,6 +40,7 @@ namespace BlackJack
                         Console.WriteLine($"{player.GetPlayer()} score is {hand.GetHandValue()}");
                         if (hand.GetIsBust() == true)
                         {
+                            player.Status = "bust";
                             Console.WriteLine("You busted");
                             break;
                         }
@@ -47,6 +48,8 @@ namespace BlackJack
                 }
             }
             Console.WriteLine($"Cards left: {deck.TestCardsLeft()}");
+            var dealerHand = new Hand(deck);
+            
         }
     }
 }
