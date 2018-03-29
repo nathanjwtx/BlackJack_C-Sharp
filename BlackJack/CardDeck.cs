@@ -18,8 +18,8 @@ namespace BlackJack
 
         public CardDeck()
         {
-            this.RawDeck = new List<string>();
-            this.Deck = new Stack<string>();
+            RawDeck = new List<string>();
+            Deck = new Stack<string>();
             RawDeck = Cards.Split(',').ToList();
 
             ShuffleList(RawDeck);
@@ -52,7 +52,7 @@ namespace BlackJack
 
         public int TestCardsLeft()
         {
-            return Deck.Count();
+            return Deck.Count;
         }
 
     }

@@ -20,10 +20,10 @@ namespace BlackJack
             IsBust = false;
         }
 
-//        public void AddCardToHand(string card)
-//        {
-//            PlayerHand.Add(card);            
-//        }
+        public void AddCardToHand(string card)
+        {
+            PlayerHand.Add(card);            
+        }
 
         public void GetHand()
         {

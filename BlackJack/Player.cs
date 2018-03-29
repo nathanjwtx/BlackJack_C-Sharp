@@ -16,7 +16,7 @@ namespace BlackJack
             this.BankRoll = 100;
             PlayerHand = new Hand();
         }
-
+        
         public Player(int bankroll)
         {
             SetBankRoll(bankroll);
