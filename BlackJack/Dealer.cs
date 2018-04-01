@@ -2,20 +2,20 @@
 
 namespace BlackJack
 {
-    public class Dealer
+    public class TheDealer
     {
-        public Player _dealer { get; }
+        public Player Dealer { get; }
 
-        private static int dealerCount;
+        private static int _dealerCount;
 
-        public Dealer(Player dealer)
+        public TheDealer(Player dealer)
         {
-            if (dealerCount == 0)
+            if (_dealerCount == 0)
             {
-                _dealer = dealer;
+                Dealer = dealer;
                 dealer.SetBankRoll(10000);
                 dealer.SetPlayerName("Dealer");
-                dealerCount += 1;
+                _dealerCount += 1;
             }
             else
             {

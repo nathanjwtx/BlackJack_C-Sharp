@@ -7,23 +7,30 @@ namespace BlackJack
     {
         private CardDeck Deck { get; set; }
         
-        public void Game(List<Player> players)
+        public void Game(List<Player> players, TheDealer dealer)
         {
-//            var dealer = new Dealer(new Player());
             Deck = new CardDeck();
             var hand = new Hand();
             var dealerHand = new Hand();
             // Deal initial cards 
-            DealInitialCards(players, hand);
+            DealInitialCards(players);
             // dealer's face card
             var dealerFace = Deck.DealCard();
-            dealerHand.SetCardValue(dealerFace);
+            var dealerSecond = Deck.DealCard();
+            dealer.Dealer.PlayerHand.SetCardValue(dealerFace);
+//            dealerHand.SetCardValue(dealerFace);
             Console.WriteLine("Dealer's face card is:");
             Console.WriteLine(dealerFace);
             // Player turns
             PlayerTurn(players, hand);
 
             Console.WriteLine($"Cards left: {Deck.TestCardsLeft()}");
+
+            DealerTurn(players, dealerHand, dealerSecond, dealer);
+        }
+
+        private void DealerTurn(List<Player> players, Hand dealerHand, string dealerSecond, TheDealer dealer)
+        {
             // Check to see if any players are not bust
             var countStick = 0;
             foreach (var player in players)
@@ -33,21 +40,42 @@ namespace BlackJack
                     countStick += 1;
                 }
             }
+
             if (countStick > 0)
             {
-
-                Console.WriteLine("dealer's next card:");
-//                dealerHand.Deal();
-//                Console.WriteLine(dealerHand.GetHandValue());
-//                if (dealerHand.GetHandValue() <= 17)
-//                {
-//                    dealerHand.SetCardValue(dealerHand.Deal());
-//                    Console.WriteLine(dealerHand.GetHandValue());
-//                }
-//                else
-//                {
-//                    dealerHand.Stick = true;
-//                }
+                dealer.Dealer.PlayerHand.SetCardValue(dealerSecond);
+                Console.WriteLine($"Dealer's second card is: {dealerSecond}");
+                var dealDealer = true;
+                while (dealDealer)
+                {
+                    if (dealer.Dealer.PlayerHand.GetHandValue() <= 17)
+                    {
+                        var dealerCard = Deck.DealCard();
+                        dealer.Dealer.PlayerHand.SetCardValue(dealerCard);
+//                        dealerHand.SetCardValue(dealerCard);
+                        dealer.Dealer.PlayerHand.AddCardToHand(dealerCard);
+//                        dealerHand.AddCardToHand(dealerCard);
+                        Console.WriteLine($"Dealer's next card is: {dealerCard}");
+                    }
+                    else if (dealer.Dealer.PlayerHand.GetHandValue() <= 21)
+                    {
+                        dealerHand.Stick = true;
+                        Console.WriteLine($"Dealer sticks on: {dealer.Dealer.PlayerHand.GetHandValue()}");
+                        dealDealer = false;
+                    }
+                    else if (dealer.Dealer.PlayerHand.GetHandValue() > 21)
+                    {
+                        Console.WriteLine("Dealer went bust!");
+                        dealDealer = false;
+                    }
+                    else
+                    {
+                        dealer.Dealer.PlayerHand.Stick = true;
+                        dealer.Dealer.Status = "stick";
+                        Console.WriteLine($"Dealer sticks on: {dealer.Dealer.PlayerHand.GetHandValue()}");
+                        dealDealer = false;
+                    }
+                }
             }
             else
             {
@@ -61,12 +89,13 @@ namespace BlackJack
             {
                 Console.WriteLine($"{player.GetPlayer()} your cards are: ");
                 player.PlayerHand.GetHand();
-                Console.WriteLine(player.PlayerHand.GetHandValue());
+                Console.WriteLine($"{player.GetPlayer()} score is {player.PlayerHand.GetHandValue()}");
                 // Next card
                 while (hand.Stick == false)
                 {
                     Console.WriteLine("(D)eal or (S)tick?");
-                    if (Console.ReadLine().ToUpper() == "S")
+                    var playResponse = Console.ReadLine();
+                    if (playResponse != null && playResponse.ToUpper() == "S")
                     {
                         player.PlayerHand.Stick = true;
                         player.Status = "stick";
@@ -74,25 +103,26 @@ namespace BlackJack
                         break;
                     }
 
-//                    else
+                    if (playResponse != null && playResponse.ToUpper() == "D")
                     {
                         var card = Deck.DealCard();
                         player.PlayerHand.SetCardValue(card);
                         player.PlayerHand.AddCardToHand(card);
                         Console.WriteLine(card);
                         Console.WriteLine($"{player.GetPlayer()} score is {player.PlayerHand.GetHandValue()}");
-                        if (player.PlayerHand.GetIsBust())
-                        {
-                            player.Status = "bust";
-                            Console.WriteLine("You busted");
-                            break;
-                        }
+                    }
+
+                    if (player.PlayerHand.GetIsBust())
+                    {
+                        player.Status = "bust";
+                        Console.WriteLine("You busted");
+                        break;
                     }
                 }
             }
         }
 
-        private void DealInitialCards(List<Player> players, Hand hand)
+        private void DealInitialCards(List<Player> players)
         {
             Console.WriteLine("--------------START INITIAL DEAL-----------------------------");
             for (int i = 0; i < 2; i++)
@@ -100,7 +130,6 @@ namespace BlackJack
                 foreach (Player player in players)
                 {
                     var card = Deck.DealCard();
-//                    hand.PlayerHand.Add(card);
                     player.PlayerHand.AddCardToHand(card);
                     player.PlayerHand.SetCardValue(card);
                     Console.WriteLine($"Card {i + 1} for {player.GetPlayer()} is: ");

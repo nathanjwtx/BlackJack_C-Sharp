@@ -9,10 +9,10 @@ namespace BlackJack.UnitTests1
         [Test]
         public void Dealer_SingleDealer_ReturnsNull()
         {
-            var d1 = new Dealer(new Player());
-            var d2 = new Dealer(new Player());
+            var d1 = new TheDealer(new Player());
+            var d2 = new TheDealer(new Player());
 
-            var result = d2._dealer;
+            var result = d2.Dealer;
 
             Assert.That(result, Is.Null);
         }
@@ -20,9 +20,9 @@ namespace BlackJack.UnitTests1
         [Test]
         public void Dealer_GetBankRoll_ReturnsInt()
         {
-            var d1 = new Dealer(new Player());
+            var d1 = new TheDealer(new Player());
 
-            var result = d1._dealer.BankRoll;
+            var result = d1.Dealer.BankRoll;
             
             Assert.That(result, Is.EqualTo(10000));
         }

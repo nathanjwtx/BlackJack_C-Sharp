@@ -23,8 +23,8 @@ namespace BlackJack
                 players.Add(p1);
                 p1.SetPlayerName(name);
             }
-
-            game.Game(players);
+            var dealer = new TheDealer(new Player());
+            game.Game(players, dealer);
         }
     }
 }
