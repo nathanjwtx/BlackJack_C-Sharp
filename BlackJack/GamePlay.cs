@@ -10,8 +10,6 @@ namespace BlackJack
         public void Game(List<Player> players, TheDealer dealer)
         {
             Deck = new CardDeck();
-            var hand = new Hand();
-            var dealerHand = new Hand();
             // Deal initial cards 
             DealInitialCards(players);
             // dealer's face card
@@ -22,14 +20,13 @@ namespace BlackJack
             Console.WriteLine("Dealer's face card is:");
             Console.WriteLine(dealerFace);
             // Player turns
-            PlayerTurn(players, hand);
-
+            PlayerTurn(players);
             Console.WriteLine($"Cards left: {Deck.TestCardsLeft()}");
 
-            DealerTurn(players, dealerHand, dealerSecond, dealer);
+            DealerTurn(players, dealerSecond, dealer);
         }
 
-        private void DealerTurn(List<Player> players, Hand dealerHand, string dealerSecond, TheDealer dealer)
+        private void DealerTurn(List<Player> players, string dealerSecond, TheDealer dealer)
         {
             // Check to see if any players are not bust
             var countStick = 0;
@@ -59,7 +56,7 @@ namespace BlackJack
                     }
                     else if (dealer.Dealer.PlayerHand.GetHandValue() <= 21)
                     {
-                        dealerHand.Stick = true;
+                        dealer.Dealer.PlayerHand.Stick = true;
                         Console.WriteLine($"Dealer sticks on: {dealer.Dealer.PlayerHand.GetHandValue()}");
                         dealDealer = false;
                     }
@@ -83,7 +80,7 @@ namespace BlackJack
             }
         }
 
-        private void PlayerTurn(List<Player> players, Hand hand)
+        private void PlayerTurn(List<Player> players)
         {
             foreach (var player in players)
             {
@@ -91,7 +88,7 @@ namespace BlackJack
                 player.PlayerHand.GetHand();
                 Console.WriteLine($"{player.GetPlayer()} score is {player.PlayerHand.GetHandValue()}");
                 // Next card
-                while (hand.Stick == false)
+                while (player.PlayerHand.Stick == false)
                 {
                     Console.WriteLine("(D)eal or (S)tick?");
                     var playResponse = Console.ReadLine();
