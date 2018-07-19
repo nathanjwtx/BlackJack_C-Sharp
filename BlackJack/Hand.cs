@@ -11,6 +11,7 @@ namespace BlackJack
         private bool IsBust { get; set; }
         public bool Stick { get; set; }
         private bool IsBlackJack { get; set; }
+        public int HandCount { get; set; }
         
         public Hand ()
 //        public Hand (CardDeck _deck)
@@ -18,6 +19,7 @@ namespace BlackJack
 //            this._deck = _deck;
             PlayerHand = new List<string>();
             IsBust = false;
+            HandCount += 1;
         }
 
         public void AddCardToHand(string card)
