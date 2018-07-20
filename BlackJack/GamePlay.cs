@@ -7,8 +7,11 @@ namespace BlackJack
     {
         private CardDeck Deck { get; set; }
         
+        private Dictionary<string, int> _allScores;
+        
         public void Game(List<Player> players, TheDealer dealer)
         {
+            _allScores = new Dictionary<string, int>();
             Deck = new CardDeck();
             // Deal initial cards 
             DealInitialCards(players);
@@ -24,6 +27,7 @@ namespace BlackJack
             Console.WriteLine($"Cards left: {Deck.TestCardsLeft()}");
 
             DealerTurn(players, dealerSecond, dealer);
+            GetWinner(_allScores);
         }
 
         private void DealerTurn(List<Player> players, string dealerSecond, TheDealer dealer)
@@ -58,6 +62,7 @@ namespace BlackJack
                     {
                         dealer.Dealer.PlayerHand.Stick = true;
                         Console.WriteLine($"Dealer sticks on: {dealer.Dealer.PlayerHand.GetHandValue()}");
+                        _allScores.Add("Dealer", dealer.Dealer.PlayerHand.GetHandValue());
                         dealDealer = false;
                     }
                     else if (dealer.Dealer.PlayerHand.GetHandValue() > 21)
@@ -96,6 +101,7 @@ namespace BlackJack
                     {
                         player.PlayerHand.Stick = true;
                         player.Status = "stick";
+                        _allScores.Add(player.GetPlayer(), player.PlayerHand.GetHandValue());
                         Console.WriteLine($"{player.GetPlayer()} has stuck on {player.PlayerHand.GetHandValue()}");
                         break;
                     }
